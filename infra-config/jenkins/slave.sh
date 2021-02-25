@@ -31,7 +31,7 @@ echo "apt-get update done!.."
 	apt-get install unzip
 EOF
 
-echo "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQCxLIVvNqV+srO7bIo+bEbK3lb3+reSomQTux3iACBlPEBWaktuoqmGQildfQBVxsgw4g7jbhMWZySBGt41NcKRz8s0tsD5xQa4Q0K51x0q6kLoiJ+EAZfxfHeBOFiWXomA4ysydEPAiIQztakEuCBuwecnpndJ2pTGkClUFQ6QkASWdSv2EnVg9lrUPToXLldyJKaohp/h+H9jbuVKXNGHMz32rATFkptQ6wC4aMOJMZ6i4NMt4FRuglQYfrZ1B/NHwnWT1RrI4oIFPCwOAQ29ST9gpVRs62qIZcyxV+0J+prLcXDOoMyHpSXAZq8K1SlBDfqMW5IzHyY/Lo7kDT8N ubuntu@ip-10-0-0-73" >> ~/.ssh/authorized_keys
+echo "ssh-rsa <your ssh rsa key goes here> ubuntu@ip-address" >> ~/.ssh/authorized_keys
 
 #######################
 # Install Packer 
