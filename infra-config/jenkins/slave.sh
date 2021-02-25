@@ -31,7 +31,7 @@ echo "apt-get update done!.."
 	apt-get install unzip
 EOF
 
-echo "ssh-rsa <your ssh rsa key goes here> ubuntu@ip-address" >> ~/.ssh/authorized_keys
+echo "ssh-rsa <your ssh rsa key goes here> user@ip-address" >> ~/.ssh/authorized_keys
 
 #######################
 # Install Packer 
