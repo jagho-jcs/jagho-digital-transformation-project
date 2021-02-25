@@ -1,0 +1,30 @@
+{
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Sid": "ListBucket",
+            "Effect": "Allow",
+            "Principal": {
+                "AWS": [
+                    "arn:aws:iam::123456789012:user/jenkinsusr"
+                ]
+            },
+            "Action": "s3:ListBucket",
+            "Resource": "arn:aws:s3:::jcs.eu.west.3.common.infra.terraform-remote-state"
+        },
+        {
+            "Sid": "GetPutObject",
+            "Effect": "Allow",
+            "Principal": {
+                "AWS": [
+                    "arn:aws:iam::123456789012:user/jenkinsusr"
+                ]
+            },
+            "Action": [
+                "s3:GetObject",
+                "s3:PutObject"
+            ],
+            "Resource": "arn:aws:s3:::jcs.eu.west.3.common.infra.terraform-remote-state/jcs-cicd-iac/terraform.tfstate"
+        }
+    ]
+}

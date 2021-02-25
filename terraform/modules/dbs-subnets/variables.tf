@@ -1,0 +1,14 @@
+variable region {}
+variable vpc_name {}
+variable vpc_id {}
+variable vpc_cidr_block {}
+variable destination_cidr_block {}
+variable dbs_subnets {}
+variable dbs_subnet_name {}
+variable dbs_subnet_role {}
+variable dbs_newbit_size {}
+variable dbs_subnet_start {}
+variable dbs_route_table_role {}
+variable dbs_network_acl_name {}
+variable dbs_network_acl_role {}
+variable jcs_account_tags {}

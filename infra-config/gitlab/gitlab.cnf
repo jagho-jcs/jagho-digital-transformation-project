@@ -1,0 +1,36 @@
+external_url 'https://gitlab.dev.yourdomain.com'
+
+git_data_dirs({"default" => {"path" => "/nfs/home/var/opt/gitlab-data/git-data"}})
+gitlab_rails['uploads_directory'] 		= '/nfs/home/var/opt/gitlab-data/uploads'
+gitlab_rails['shared_path'] 			= '/nfs/home/var/opt/gitlab-data/shared'
+gitlab_ci['builds_directory'] 			= '/nfs/home/var/opt/gitlab-data/builds'
+
+nginx['redirect_http_to_https'] 		= true
+nginx['redirect_http_to_https_port'] 	= 80
+
+nginx['listen_port'] 					= 80
+nginx['listen_https'] 					= false
+
+nginx['proxy_set_headers'] = {
+  "X-Forwarded-Proto" => "https",
+  "X-Forwarded-Ssl" => "on"	
+}
+
+
+postgresql['enable'] 					= false
+postgresql['database']					="postgres"
+
+gitlab_rails['db_adapter'] 				= "postgresql"
+gitlab_rails['db_encoding'] 			= "unicode"
+
+gitlab_rails['db_database'] 			= "gitlabhq_production"
+gitlab_rails['db_username'] 			= "gitlab"
+gitlab_rails['db_password'] 			= "********************"
+gitlab_rails['db_host'] 				= "par-cicd-dev-gitlab-db-ha.cqzqcvvrhcrz.eu-west-3.rds.amazonaws.com"
+gitlab_rails['db_port'] 				= 5432
+
+redis['enable'] 						= false
+
+gitlab_rails['redis_host'] 				= "par-cicd-dev-gitlab-redis.fukl7z.ng.0001.euw3.cache.amazonaws.com"
+
+gitlab_rails['redis_port'] 				= 6379

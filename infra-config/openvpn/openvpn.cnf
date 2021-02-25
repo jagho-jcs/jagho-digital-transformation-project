@@ -1,0 +1,6 @@
+database identifier: 	par-ntw-dev-openvpn-db-ha
+database name:			openvpnha_production
+database username: 		openvpn
+password: 				***********************
+
+endpoint:    			par-ntw-dev-openvpn-db-ha.cy4kgc1t4v3w.eu-west-3.rds.amazonaws.com
