@@ -1,6 +1,6 @@
-# Jenkins User Documentation
+# Jenkins
 
-Welcome to the Jenkins user documentation - for people wanting to use Jenkin's existing functionality and plugin features.
+Welcome to Jenkins.
 
 ## What is Jenkins?
 
