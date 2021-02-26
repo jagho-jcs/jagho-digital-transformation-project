@@ -32,4 +32,4 @@ Creating a `Jenkinsfile` and committing it to source control provides a number o
 
 -	Single source of truth for the Pipeline, which can be viewed and edited by multiple members of the project.
 
-While the syntax for defining a Pipeline, either in the web UI or with a `Jenkinsfile` is the same, it is generally considered best practice to define the Pipeline in a Jenkinsfile and check that in to source control.
+While the syntax for defining a Pipeline, either in the web UI or with a `Jenkinsfile` is the same, it is generally considered best practice to define the Pipeline in a `Jenkinsfile` and check that in to source control.
