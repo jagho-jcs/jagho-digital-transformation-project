@@ -24,12 +24,12 @@ The definition of a Jenkins Pipeline is written into a text file (called a Jenki
 
 Creating a `Jenkinsfile` and committing it to source control provides a number of immediate benefits:
 
--	 Automatically creates a Pipeline build process for all branches and pull requests.
+-	Automatically creates a Pipeline build process for all branches and pull requests.
 
-	* Code review/iteration on the Pipeline (along with the remaining source code).
+-	Code review/iteration on the Pipeline (along with the remaining source code).
 
-	* Audit trail for the Pipeline.
+-	Audit trail for the Pipeline.
 
-	* Single source of truth for the Pipeline, which can be viewed and edited by multiple members of the project.
+-	Single source of truth for the Pipeline, which can be viewed and edited by multiple members of the project.
 
 While the syntax for defining a Pipeline, either in the web UI or with a `Jenkinsfile` is the same, it is generally considered best practice to define the Pipeline in a Jenkinsfile and check that in to source control.
