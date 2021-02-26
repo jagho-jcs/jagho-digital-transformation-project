@@ -17,7 +17,7 @@ variable vpc_id {}
 variable destination_cidr_block {}
 
 #################################################
-# jcs Global Account Tags
+# JCS Global Account Tags
 #################################################
 
 variable jcs_account_tags {}
