@@ -15,16 +15,32 @@ function error_and_die() {
   exit 1;
 }
 
+#########################################################################################
+#																						#
+#																						#
+# 	Local variables these can be changed below..										#
+#																						#
+#																						#
+#########################################################################################
+
 # ...
 app_name="jenkins-master";
 role="Master";
-ProvisionedWith="aws-cli"
+ProvisionedWith="awscli"
 jenkins_master_asg="$(cat my_auto_scaling_grp.txt)";
 launch_configuration_name="$(cat my_launch_config.txt)";
-vpc_zone_identifier="subnet-02c5f63d32177a86c,
-					 subnet-011aff5cb8cf41a46,
-					 subnet-0a45bf307721b95fe";
-aws_default_profile="dev-jcs";
+vpc_zone_identifier="subnet-your-aws-subnet,
+					 subnet-your-aws-subnet,
+					 subnet-your-aws-subnet";
+aws_default_profile="your-aws-profile";
+
+#########################################################################################
+#																						#
+#																						#
+# 	Do not make any changes below..														#
+#																						#
+#																						#
+#########################################################################################
 
 # ...
 export AWS_DEFAULT_PROFILE="${aws_default_profile}"

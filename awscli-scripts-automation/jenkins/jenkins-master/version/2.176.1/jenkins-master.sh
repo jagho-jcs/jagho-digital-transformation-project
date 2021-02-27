@@ -10,6 +10,15 @@
 # Usage: ./deploy-jenkins-master.sh <build option>
 
 # Standardised error process. Errors to STDERR.
+
+#########################################################################################
+#																						#
+#																						#
+# 	DO NOT MAKE ANY CHANGES BELOW..														#
+#																						#
+#																						#
+#########################################################################################
+
 function error_and_die() {
   echo -e "[ERROR] ${1}" >&2;
   exit 1;
@@ -40,36 +49,36 @@ auto_scaling_grp_file="my_auto_scaling_grp";
 #########################################################################################
 #																						#
 #																						#
-# 	DO NOT MAKE ANY CHANGES ABOVE..														#
+# 	Local variables these can be changed below or set at runtime..						#
 #																						#
 #																						#
 #########################################################################################
 
 # ...
-aws_default_profile="dev-jcs";
+aws_default_profile="your-aws-profile";
 
 # ...
-network_acl_id="acl-0df16bbe0208bbfc9";
-grp_id="sg-0eb8f99da104835bc";
-rule_number=120;
-port_range_from=22;
-port_range_to=22;
+network_acl_id="acl-your-network-acl";
+grp_id="sg-your-security-group";
+rule_number=your-port-number;
+port_range_from=port-range-from;
+port_range_to=port-range-to;
 # block_device_mappings=`"[{\"DeviceName\": \"/dev/sda1\",\"Ebs\":{\"VolumeSize\":10}}]"`;
-user_data="file://my_usrdata.txt";
+user_data="file://my_usrdata.txt"; # DO NOT CHANGE
 
 # ...
-key_name="jcs_demo_ireland";
-security_grps="sg-00eca0b3f30287d16";
-instance_type="t2.micro";
-instance_monitoring="Enabled=false";
+key_name="your-key-name";
+security_grps="sg-your-security-group";
+instance_type="your-instance-type";
+instance_monitoring="Enabled=false"; # There is a cost associated to this if set to true
 
 # ...
 
 
 
 # ...
-artifacts_file="jenkins_master_build_artifacts";
-packer_bld_file="jenkins-master";
+artifacts_file="jenkins_master_build_artifacts"; # DO NOT CHANGE
+packer_bld_file="jenkins-master"; # DO NOT CHANGE
 
 #########################################################################################
 #																						#
