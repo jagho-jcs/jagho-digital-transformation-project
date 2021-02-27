@@ -64,7 +64,7 @@ rule_number=your-port-number;
 port_range_from=port-range-from;
 port_range_to=port-range-to;
 # block_device_mappings=`"[{\"DeviceName\": \"/dev/sda1\",\"Ebs\":{\"VolumeSize\":10}}]"`;
-user_data="file://my_usrdata.txt"; # DO NOT CHANGE
+user_data="file://usrdata_jenkins_master.txt"; # DO NOT CHANGE
 
 # ...
 key_name="your-key-name";
