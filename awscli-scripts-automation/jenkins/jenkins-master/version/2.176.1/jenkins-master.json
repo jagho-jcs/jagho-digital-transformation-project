@@ -13,13 +13,13 @@
     "in_use":                 "Yes",
     "role":                   "Master",
 
-    "region":                 "eu-west-1",
-    "instance_type":          "t2.micro",
+    "region":                 "your-aws-region",
+    "instance_type":          "your-aws-instance-type",
 
     "ami_description":        "Ubuntu 16.04 most recent",
-    "vpc_id":                 "vpc-0c0828a4522aeb359",
-    "subnet_id":              "subnet-02c5f63d32177a86c",
-    "security_group_id":      "sg-0eb8f99da104835bc"
+    "vpc_id":                 "vpc-your-vpc-id",
+    "subnet_id":              "subnet-your-subnet-id",
+    "security_group_id":      "sg-your-subnet-id"
     
   },
   "_comment" : "This will pull the most recent Ubuntu 16.04 version!..",
