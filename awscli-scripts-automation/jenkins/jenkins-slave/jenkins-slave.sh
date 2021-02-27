@@ -55,7 +55,7 @@ rule_number=120;
 port_range_from=22;
 port_range_to=22;
 # block_device_mappings=`"[{\"DeviceName\": \"/dev/sda1\",\"Ebs\":{\"VolumeSize\":10}}]"`;
-# user_data="file://my_usrdata.txt";
+# user_data="file://usrdata_jenkins_slave.txt";
 
 # ...
 # key_name="jcs_demo_ireland";
