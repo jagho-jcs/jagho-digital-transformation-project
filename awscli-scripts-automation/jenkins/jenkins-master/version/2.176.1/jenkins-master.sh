@@ -1,11 +1,12 @@
 #!/bin/bash
 
-# MIT Licence applies, except if you modify this script you agree to the following terms:
-# Don't use `set -e`, you're not an animal. Trap your errors.
-# Don't use uppercase for variables that aren't inherited from the environment.
-# Use 'echo -e' by default because science.
-# Terminate lines with semicolons because voodoo.
-# Quote your variable interpolations just about everywhere.
+# 	email: Yomi.Ogunyinka@jaghoConsultants.co.uk
+#	MIT Licence applies, except if you modify this script you agree to the following terms:
+# 	Don't use `set -e`, you're not an animal. Trap your errors.
+# 	Don't use uppercase for variables that aren't inherited from the environment.
+# 	Use 'echo -e' by default because science.
+# 	Terminate lines with semicolons because voodoo.
+# 	Quote your variable interpolations just about everywhere.
 
 # Usage: ./deploy-jenkins-master.sh <build option>
 
