@@ -17,3 +17,7 @@ variable visibility_level {
   type        = string
   description = "Visibility level"
 }
+
+variable "default_branch" {
+  default = "master"
+}
