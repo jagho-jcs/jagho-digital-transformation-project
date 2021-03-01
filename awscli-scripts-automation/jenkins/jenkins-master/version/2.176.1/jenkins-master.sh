@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# 	email: Yomi.Ogunyinka@jaghoConsultants.co.uk
+# 	Email: Yomi.Ogunyinka@jaghoConsultants.co.uk
 #	MIT Licence applies, except if you modify this script you agree to the following terms:
 # 	Don't use `set -e`, you're not an animal. Trap your errors.
 # 	Don't use uppercase for variables that aren't inherited from the environment.
