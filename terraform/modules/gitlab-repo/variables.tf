@@ -18,6 +18,6 @@ variable visibility_level {
   description = "Visibility level"
 }
 
-variable "default_branch" {
+variable default_branch {
   default = "master"
 }
