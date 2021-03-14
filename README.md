@@ -10,10 +10,12 @@ Please note we have a [code of conduct](CODE_OF_CONDUCT.md), please follow it in
 
 | Folder | Content |
 | ------ | ------- |
+| aws-keys | Keys that we use to access EC2 instances that we use at JCS |
 | iam-policies | Custom iam policies that we use at JCS |
+| gitlab-repositories | Repositories that we use at JCS |
 | infra-config | All configuration files for our RDS clusters and the network |
-| bash-scripts | Scripts for environment clean-up |
-| terraform | Terraform scripts that will be triggered to spin up infra in AWS  |
+| awscli-scripts-automation | Scripts for environment setup |
+| terraform | Terraform scripts that will be triggered to spin up infrastructure in AWS  |
 
 ### How to use this repository
 
@@ -57,6 +59,6 @@ Create defaults as much as possible so we can make our stacks light. Make use of
 
 That being said, keep things simple, clean and easy to read/use.
 
-DO NOT - create dependencies with the module, it should not under any circumstance link with any other module/folder in this or any other repository.
+**DO NOT** - create dependencies with the module, it should not under any circumstance link with any other module/folder in this or any other repository.
 
 Make sure these modules are written and compatible with terraform 0.12.*
