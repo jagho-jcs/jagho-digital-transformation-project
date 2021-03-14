@@ -1,4 +1,4 @@
-# JAGHO Digital Transformation Project
+# JCS Digital Transformation Project
 
 ## Repository Information
 
@@ -49,7 +49,7 @@ Each module should have its own folder in the repository.
 
 It should not be specific to any service or application and should be generic/vanilla and re-usable as possible.
 
-Make sure every argument is parameterize. Do not hard code maps which may be different for other use cases (for example the lambda argument "environment"), instead create a variable map.
+Make sure every argument is parameterized. Do not hard code maps which may be different for other use cases (for example the lambda argument "environment"), instead create a variable map.
 
 Add conditions where appropriate - for example S3 resources that require CORRS.. you can not add this as an option, you will need to add a condition on the resource, then add another resource to create without CORRS.
 
