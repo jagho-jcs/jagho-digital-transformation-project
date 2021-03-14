@@ -41,7 +41,7 @@ create the database cluster, configure all the load balancers, etc.
 
 ### JCS Terraform Modules
 
-This directory contains all the terraform modules required to build out the JCS AWS Infrastructure.
+This directory contains all the terraform modules required to build out the `JCS` AWS Infrastructure.
 
 ### Requirements
 
