@@ -1,4 +1,4 @@
-resource "gitlab_project" "this" {
+resource gitlab_project this {
   name              = var.name
   description       = var.description
 
