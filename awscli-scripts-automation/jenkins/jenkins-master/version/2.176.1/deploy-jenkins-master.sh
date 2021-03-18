@@ -60,7 +60,7 @@ aws_default_profile=""; # Set the AWS Profile you want to use
 
 # ...
 network_acl_id="acl-your-network-acl";
-grp_id="sg-your-security-group";
+grp_id=""; # insert the security group id here
 rule_number=your-port-number;
 port_range_from=port-range-from;
 port_range_to=port-range-to;
