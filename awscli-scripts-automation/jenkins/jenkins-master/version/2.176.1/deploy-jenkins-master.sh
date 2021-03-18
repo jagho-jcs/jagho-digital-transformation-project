@@ -70,7 +70,7 @@ user_data="file://usrdata_jenkins_master.txt"; # DO NOT CHANGE
 # ...
 key_name="";  # Enter AWS instance keyname tou use to access AWS resources
 security_grps="";  # Security group to use you can specify multiple security groups
-instance_type="";
+instance_type="";  # Instance type you want to use
 instance_monitoring="Enabled=false"; # There is a cost associated to this if set to true
 
 # ...
