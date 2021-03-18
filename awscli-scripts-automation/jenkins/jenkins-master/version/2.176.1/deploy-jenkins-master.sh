@@ -56,7 +56,7 @@ auto_scaling_grp_file="my_auto_scaling_grp";
 #########################################################################################
 
 # ...
-aws_default_profile="your-aws-profile";
+aws_default_profile=""; # Set the AWS Profile you want to use
 
 # ...
 network_acl_id="acl-your-network-acl";
