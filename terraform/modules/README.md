@@ -6,4 +6,4 @@ Modules can be used to create lightweight abstractions, so that you can describe
 
 Re-usable modules are defined using all of the same configuration language concepts we use in root modules.
 
-- Input variables to accept values from the calling module
+- **Input variables** to accept values from the calling module
