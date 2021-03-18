@@ -12,19 +12,19 @@ Compute resources in your compute environments need external network access to c
 
 ### Requirements
 
-| Name | 	Version |
-|------|-------------|
-| terraform| >=0.12.21 |
-| aws | >=3.10 |
+| Name 	    | Version     |
+|---------  |-------------|
+| terraform | >=0.12.21   |
+| aws       | >=3.10      |
 
 ### Providers
 
-| Name | 	Version |
+| Name | Version     |
 |------|-------------|
-| aws | >=3.10 |
+| aws  | >=3.10      |
 
 ### Modules
 
-| Name | 	Source | Version |
+| Name | Source    | Version |
 |------|-----------| --------|
-| vpc  | ../.. 	   |         |
+| vpc  | ../../../ |         |
