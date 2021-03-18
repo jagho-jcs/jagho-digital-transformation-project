@@ -68,9 +68,9 @@ port_range_to=port-range-to;
 user_data="file://usrdata_jenkins_master.txt"; # DO NOT CHANGE
 
 # ...
-key_name="your-key-name";
-security_grps="sg-your-security-group";
-instance_type="your-instance-type";
+key_name="";  # Enter AWS instance keyname tou use to access AWS resources
+security_grps="";  # Security group to use
+instance_type="";
 instance_monitoring="Enabled=false"; # There is a cost associated to this if set to true
 
 # ...
