@@ -1,0 +1,2 @@
+# AWS tagging
+Amazon Web Services allows customers to assign metadata to their **AWS** resources in the form. of **tags**. Each **tag** is a simple label consisting of a customer-defined key and an optional value that can make it easier to manage, search for, and filter resources by purpose, owner, environment, or other criteria.
