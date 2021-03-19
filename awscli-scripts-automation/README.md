@@ -8,7 +8,7 @@ DevOps automation is the addition of technology that performs tasks with reduced
 
 ## What are the benefits of DevOps Automation
 
-### The Measurable Benefits of DevOps Automation
+**The Measurable Benefits of DevOps Automation**
 
 - Shorter Development Cycle
 - Increased Release Velocity
