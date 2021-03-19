@@ -18,7 +18,7 @@ function error_and_die() {
 #########################################################################################
 #																						#
 #																						#
-# 	Local variables these can be changed below..										#
+# 	Default variables these can be changed below..										#
 #																						#
 #																						#
 #########################################################################################
@@ -29,10 +29,18 @@ role="Master";
 ProvisionedWith="awscli"
 jenkins_master_asg="$(cat my_auto_scaling_grp.txt)";
 launch_configuration_name="$(cat my_launch_config.txt)";
-vpc_zone_identifier="subnet-your-aws-subnet,
-					 subnet-your-aws-subnet,
-					 subnet-your-aws-subnet";
-aws_default_profile="your-aws-profile";
+
+#########################################################################################
+#																						#
+#																						#
+# 	Enter variables to be used below...										#
+#																						#
+#																						#
+#########################################################################################
+
+#..
+vpc_zone_identifier="";  # Multiple subnets can applied
+aws_default_profile="";  # Enter AWS profile with the appropriate permissions
 
 #########################################################################################
 #																						#

@@ -1,25 +1,25 @@
 {
-  "_comment" : "Simple Packer Template using Ubuntu 16.04 most recent",
+  "_comment" : "Packer Template using Ubuntu 16.04 most recent",
   "variables": {
     
-    "ssh_username":           "jagho-demo",
+    "ssh_username":               "",
 
-    "img_name": "Jenkins Master",
-    "ami_name": "jenkins-master",
-    "launch_config_prefix": "lc",
-    "auto_scaling_grp_prefix" : "asg",
+    "img_name":                   "Jenkins Master",
+    "ami_name":                   "jenkins-master",
+    "launch_config_prefix":       "lc",
+    "auto_scaling_grp_prefix" :   "asg",
 
-    "web_app":                "Jenkins",
-    "in_use":                 "Yes",
-    "role":                   "Master",
+    "web_app":                    "Jenkins",
+    "in_use":                     "Yes",
+    "role":                       "Master",
 
-    "region":                 "your-aws-region",
-    "instance_type":          "your-aws-instance-type",
+    "region":                     "",
+    "instance_type":              "",
 
-    "ami_description":        "Ubuntu 16.04 most recent",
-    "vpc_id":                 "vpc-your-vpc-id",
-    "subnet_id":              "subnet-your-subnet-id",
-    "security_group_id":      "sg-your-subnet-id"
+    "ami_description":            "Ubuntu 16.04 most recent",
+    "vpc_id":                     "",
+    "subnet_id":                  "",
+    "security_group_id":          ""
     
   },
   "_comment" : "This will pull the most recent Ubuntu 16.04 version!..",
