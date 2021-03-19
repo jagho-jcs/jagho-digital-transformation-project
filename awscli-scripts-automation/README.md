@@ -6,7 +6,7 @@
 
 DevOps automation is the addition of technology that performs tasks with reduced human assistance to processes that facilitate feedback loops between operations and development teams so that iterative updates can be deployed faster to applications in production.
 
-Automation is the ultimate need for DevOps practice and ‘Automate everything’ is the key principle of DevOps. In DevOps, automation kick starts from the code generation on Developers machine till the code is pushed to the code and even after that to monitor the application and system in production.
+**Automation** is the ultimate need for DevOps practice and ‘Automate everything’ is the key principle of DevOps. In DevOps, automation kick starts from the code generation on Developers machine till the code is pushed to the code and even after that to monitor the application and system in production.
 
 ## What are the benefits of DevOps Automation?
 
