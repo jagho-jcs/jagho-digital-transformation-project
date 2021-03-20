@@ -1,0 +1,167 @@
+pipeline {
+    
+    agent any
+
+    options {
+
+        buildDiscarder(logRotator(numToKeepStr: '5'))
+        
+        }
+
+    parameters {
+
+        choice(name: 'role_account',
+            choices: ['','123456789012', '123456789013'],
+            description: 'Which account would you like to create your S3 Bucket?.. Example 123456789012')
+
+        choice(name: 'aws_region', 
+            choices: ['eu-west-3','eu-central-1', 'eu-west-1', 'eu-west-2', 'eu-west-3', 'eu-north-1', 'us-east-1'], 
+            description: 'Where would you like your bucket created?.. Examples eu-west-1, eu-central-1')        
+
+        choice(name: 'build_option', 
+            choices: ['','plan', 'apply'], 
+            description: 'Apply will provision your s3 Bucket..')
+
+        string(name: 'bucket',
+            description: '(Optional, Forces new resource) The name of the bucket. If omitted, Terraform will assign a random, unique name.')        
+    }
+
+    environment {
+
+        AWS_DEFAULT_REGION = "${params.aws_region}"
+        BUILD_OPTION = "${params.build_option}"
+        TF_HOME = tool('terraform-0.12.12')
+        TF_IN_AUTOMATION = "true"
+        PATH = "$TF_HOME:$PATH"   
+    }
+
+    stages {
+
+        stage('Parameters') {
+
+            steps {
+
+                echo "You have selected account: ${params.role_account}"
+                echo "You Selected: ${params.aws_region}"   
+            }
+        }
+
+        stage('Checkout JCS-repo Repository') {
+
+            steps {
+
+                git branch: 'development',
+                    credentialsId: '6388c0c1-70f9-4008-8938-7aa750416761',
+                    url: 'https://gitlab.dev.jagho.tk/Yomi.Ogunyinka/jagho-digital-transformation-project.git'
+            }
+        }
+
+        stage('Build Phase: Plan') {
+
+            when {
+
+                expression {
+
+                    params.build_option == 'plan'
+                    
+                    }
+                }
+
+            steps {
+
+                    withCredentials(
+                        [
+                            string(credentialsId: 'ExternalId', variable: 'external_id')
+                        ]
+                    )
+
+                        {
+                            echo "Applying AWS Credentials!.."
+
+                    withAWS(credentials: 'aws-credentials',
+                            region: "${params.aws_region}",
+                            role:'jenkins',
+                            roleAccount:"${params.role_account}", 
+                            externalId: "$external_id", 
+                            duration: 900, 
+                            roleSessionName: 'jenkins-session')
+                        {
+                            echo "This will be deployed into account ${params.role_account}"
+                            echo "This will be deployed into the ${params.aws_region} region"
+
+                            dir ('terraform/s3/jcs-cicd')
+
+                        {
+                            sh "terraform -version"
+
+                        //Remove the terraform state file so we always start from a clean state
+                            if (fileExists(".terraform/terraform.tfstate")) {
+                                sh "rm -rf .terraform/terraform.tfstate"
+                            }
+                            if (fileExists("status")) {
+                                sh "rm status"
+                            }
+                            sh "terraform init"
+                            sh "terraform get"
+                            sh 'terraform ${build_option} -var="region=${aws_region}" -var="bucket=${bucket}"'                      
+                        }                       
+                    }        
+                }
+            }
+        }
+        stage('Build Phase: Apply') {
+
+            when {
+
+                expression {
+
+                    params.build_option == 'apply'
+                    
+                    }
+                }
+
+            steps {
+
+                    withCredentials(
+                        [
+                            string(credentialsId: 'ExternalId', variable: 'external_id')
+                        ]
+                    )
+
+                        {
+                            echo "Applying AWS Credentials!.."
+
+                    withAWS(credentials: 'aws-credentials',
+                            region: "${params.aws_region}",
+                            role:'jenkins',
+                            roleAccount:"${params.role_account}", 
+                            externalId: "$external_id", 
+                            duration: 900, 
+                            roleSessionName: 'jenkins-session')
+                        {
+                            echo "This will be deployed into account ${params.role_account}"
+                            echo "This will be deployed into the ${params.aws_region} region"
+
+                            dir ('terraform/s3/jcs-cicd')
+
+                        {
+                            sh "terraform -version"
+
+                        //Remove the terraform state file so we always start from a clean state
+                            if (fileExists(".terraform/terraform.tfstate")) {
+                                sh "rm -rf .terraform/terraform.tfstate"
+                            }
+                            if (fileExists("status")) {
+                                sh "rm status"
+                            }                            
+                            sh "terraform init"
+                            sh "terraform get"
+                            sh 'terraform ${build_option} -var="region=${aws_region}" -var="bucket=${bucket}" \
+                                -auto-approve'                        
+                        }                       
+                    }        
+                }
+            }
+        }            
+    }
+}
