@@ -14,7 +14,7 @@ Please note we have a [code of conduct](CODE_OF_CONDUCT.md), please follow it in
 | iam-policies | Custom iam policies that we use at JCS |
 | gitlab-repositories | Repositories that we use at JCS |
 | infra-config | All configuration files for our RDS clusters and the network |
-| awscli-scripts-automation | Scripts for environment setup |
+| scripts-automation | Scripts for environment setup |
 | terraform | Terraform scripts that will be triggered to spin up infrastructure in AWS  |
 
 ### How to use this repository
