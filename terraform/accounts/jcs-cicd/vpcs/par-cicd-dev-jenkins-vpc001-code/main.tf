@@ -23,7 +23,7 @@ module vpc {
   )
 }
 ###############################################################################
-# jcs Global Tagging Module
+# JCS Global Tagging Module
 ###############################################################################
 module jcs-tags {
   source = "../../../../modules/jcs-tags"
@@ -50,10 +50,10 @@ module app-subnets {
   app_network_acl_name                = var.app_network_acl_name
   app_network_acl_role                = var.app_network_acl_role
 
-  jcs_account_tags                   = module.jcs-tags.jcs_aws_cicd_dev_env_default_tags  
+  jcs_account_tags                    = module.jcs-tags.jcs_aws_cicd_dev_env_default_tags  
 }
 ###############################################################################
-# Default Security  Group - jcs-Network
+# Default Security  Group - JCS-Network
 ###############################################################################
 module security-groups {
   source = "../../../../modules/security-groups"
@@ -67,5 +67,5 @@ module security-groups {
   security_group_name                 = var.security_group_name
   security_group_role                 = var.security_group_role
 
-  jcs_account_tags                   = module.jcs-tags.jcs_aws_cicd_dev_env_default_tags
+  jcs_account_tags                    = module.jcs-tags.jcs_aws_cicd_dev_env_default_tags
 }
