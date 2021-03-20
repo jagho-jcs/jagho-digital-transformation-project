@@ -1,0 +1,92 @@
+{
+  "_comment" : "Simple Packer Template using Ubuntu 16.04 most recent",
+  "variables": {
+    
+    "ssh_username":           "jagho-demo",
+
+    "web_app":                "Jenkins",
+    "in_use":                 "Yes",
+    "role":                   "Slave",
+
+    "region":                 "eu-west-1",
+    "instance_type":          "t2.micro",
+
+    
+    "ami_description":        "Ubuntu 16.04 most recent",
+    "vpc_id":                 "vpc-0c0828a4522aeb359",
+    "subnet_id":              "subnet-02c5f63d32177a86c",
+    "security_group_id":      "sg-0eb8f99da104835bc"
+    
+  },
+  "_comment" : "This will pull the most recent Ubuntu 18.04 version!..",
+  "builders": [
+    {
+      "type": "amazon-ebs",
+      "region": "{{user `region`}}",
+
+      "source_ami_filter": {
+        "filters": {
+          "virtualization-type": "hvm",
+          "name": "ubuntu/images/*ubuntu-bionic-18.04-amd64-server-*",
+          "root-device-type": "ebs"
+      },
+      "owners": ["099720109477"],
+      "most_recent": true
+    },
+      "instance_type": "{{user `instance_type`}}",
+      "ssh_username": "{{user `ssh_username`}}",
+      "ami_name": "{{user `web_app`}}{{user `role`}}-{{isotime \"2006-01-02T1504\"}}",
+      "tags": {
+        
+        "Name": "{{user `web_app`}} {{user `role`}}",
+        "InUse": "{{user `in_use`}}",
+        "CreatedBy": "Packer",
+        "WebApp": "{{user `web_app`}}",
+        "Role": "{{user `role`}}"
+      
+      },
+      
+      "vpc_id": "{{user `vpc_id`}}",
+      "subnet_id": "{{user `subnet_id`}}",
+      "security_group_id": "{{user `security_group_id`}}",
+      "associate_public_ip_address": "true",
+    
+      "ami_description": "{{user `ami_description`}}",
+      "user_data_file": "./../defaults.cfg"
+    }
+  ],
+  "provisioners": [
+    {
+      "type": "file",
+      "source": "./../defaults.cfg",
+      "destination": "/tmp/defaults.cfg/"
+    },
+    {
+      "type": "shell",
+      "inline": [
+        "sudo mv /tmp/defaults.cfg /etc/cloud/cloud.cfg.d/defaults.cfg"
+        ]
+    },
+    {
+      "type": "file",
+      "source": "{{template_dir}}/readme.txt",
+      "destination": "/home/{{user `ssh_username`}}/"
+    },
+    {
+      "type": "shell",
+      "inline":[
+        "ssh-keygen -t rsa -N \"\" -f /home/{{user `ssh_username`}}/.ssh/id_rsa",
+        "ls -al /home/{{user `ssh_username`}}",
+        "cat /home/{{user `ssh_username`}}/readme.txt"
+        ]
+    },
+    {
+      "type": "shell",
+      "script": "./../security-patches.sh"
+    },
+    {
+      "type": "shell",
+      "script": "{{template_dir}}/pkgs.sh"
+    }
+  ]
+}
