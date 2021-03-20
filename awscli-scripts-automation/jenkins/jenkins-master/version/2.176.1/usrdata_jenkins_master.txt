@@ -1,6 +1,0 @@
-#!/bin/bash
-
-hostname="jenkins-master"
-hostnamectl set-hostname $hostname
-sudo sed -i " 1 s/.*/& $hostname/" /etc/hosts
-rm /etc/cloud/cloud.cfg.d/defaults.cfg
