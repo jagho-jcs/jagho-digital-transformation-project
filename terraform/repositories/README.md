@@ -1,4 +1,4 @@
-# GitOps: The Future of Infrastructure Autoamtion
+# GitOps: The Future of Infrastructure Automation
 
 With the demands made on today's infrastructure, it's crucial for organizations to implement infrastructure automation that is repeatable, traceable, and less prone to human error. GitOps takes DevOps best practices used for application development, such as version control, collaboration, compliance, and CI/CD, and applies them to modern infrastructure automation.
 
@@ -8,7 +8,11 @@ GitOps is a paradigm or a set of practices that empowers developers to perform t
 
 ## What is GitOps?
 
-GitOps upholds the principle that `GIT` is the one and only source of truth. GitOps requires the desired state of the system to be stored in `version control` such that anyone can view the entire audit trail of changes. All changes to the desired state are fully traceable commits associated with committer information, commit IDs and time stamps. This means that both the application and the infrastructure are now versioned artifacts and can be audited using the gold standards of software development and delivery.
+GitOps upholds the principle that `GIT` is the one and only source of truth. GitOps requires the desired state of the system to be stored in a `version control` system such that anyone can view the entire audit trail of changes. All changes to the desired state are fully traceable commits associated with committer information, commit IDs and time stamps. This means that both the application and the infrastructure are now versioned artifacts and can be audited using the gold standards of software development and delivery.
+
+**Declarative specification for each environment**
+
+GitOps requires us to describe the desired state of the whole system using a declarative specification for each environment. This becomes the system of record. You can describe your environments such as test, staging and production in a code repo, along with the application version that resides in that environment.
 
 ## What is a Repository?
 
