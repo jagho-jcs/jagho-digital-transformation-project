@@ -5,7 +5,7 @@
 
 ### Development
 *.old
-*.old.*
+*.old.
 *.dev
 
 ### S3 Backend
@@ -13,6 +13,8 @@ backend.tf
 
 ### Test Variables
 *.auto.*
+*.tfvars
+*.tfvars.old
 
 ### Provider Details
 Provider.tf
