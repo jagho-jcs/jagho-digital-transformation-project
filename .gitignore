@@ -14,7 +14,6 @@ backend.tf
 ### Test Variables
 *.auto.*
 *.tfvars
-*.tfvars.old
 
 ### Provider Details
 Provider.tf
