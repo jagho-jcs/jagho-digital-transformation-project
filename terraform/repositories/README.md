@@ -12,7 +12,7 @@ GitOps upholds the principle that `GIT` is the one and only source of truth. Git
 
 **Declarative specification for each environment**
 
-GitOps requires us to describe the desired state of the whole system using a declarative specification for each environment. This becomes the system of record. You can describe your environments such as test, staging and production in a code repo, along with the application version that resides in that environment.
+GitOps requires us to describe the `desired state` of the whole system using a `declarative` specification for each environment. This becomes the system of record. You can describe your environments such as `test`, `staging` and `production` in a code repository, along with the application version that resides in that environment.
 
 ## What is a Repository?
 
