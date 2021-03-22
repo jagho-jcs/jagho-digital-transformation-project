@@ -25,13 +25,6 @@ locals {
   }
 }
 
-provider "aws" {
-  region                      = local.region
-  profile                     = local.profile
-  version                     = "~> 2.47"
-}
-
-
 module "aws_dynamodb_table" {
   source          = "../../../modules/dynamodb"
 
