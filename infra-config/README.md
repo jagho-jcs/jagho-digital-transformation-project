@@ -11,3 +11,5 @@ _**Infrastructure as Code (IaC)**_ is the approach of automating infrastructure 
 The code can be modified whenever needed-upon code execution the `IaC` tool will take care of finding the differences between the desired infrastructure in code and the actual infrastructure in the `cloud` taking steps to make the actual state equal to the desired one.
 
 For `IaC` to work in practice, created resources must not be manually modified afterwards **(an immutable infrastructure),** as this creates discord between the expected infrastructure in code and the actual state in the `cloud`.  In addition, the manually modified resources could get recreated or deleted during future code executions, and all such customization would be lost.  The solution to this is to incorporate the modifications into the infrastructure code.
+
+The purpose of infrastructure as code is to enable developers or operations teams to automatically manage, monitor and provision resources, rather than manually configure discrete hardware devices and operating systems. Infrastructure as code is sometimes referred to as programmable or software-defined infrastructure.
