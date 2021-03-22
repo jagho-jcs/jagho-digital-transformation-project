@@ -14,7 +14,7 @@ For example, a `staging` system will often be deployed into a separate AWS accou
 
 The **DynamoDB** table is keyed on `LockID` which is set as a bucketName/path, so as long as we have a unique combination of this we don’t have any problem in acquiring locks and running everything in a safe way.
 
-The S3 backend can be used in a number of different ways that make different tradeoffs between convenience, security, and isolation in such an organization.
+The `S3` backend can be used in a number of different ways that make different tradeoffs between convenience, security, and isolation in such an organization.
 
 Terraform helps us build, evolve, and manage our infrastructure using its configuration files across multiple providers. 
 
