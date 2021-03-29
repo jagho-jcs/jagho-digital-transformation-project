@@ -8,14 +8,14 @@ Please note we have a [code of conduct](CODE_OF_CONDUCT.md), please follow it in
 
 ## Structure of the repository :card_index:
 
-| Folder | Content |
-| ------ | ------- |
-| aws-keys | Keys that we use to access EC2 instances that we use at JCS |
-| iam-policies | Custom iam policies that we use at JCS |
-| gitlab-repositories | Repositories that we use at JCS |
-| infra-config | All configuration files for our RDS clusters and the network |
-| scripts-automation | Scripts for environment setup |
-| terraform | Terraform scripts that will be triggered to spin up infrastructure in AWS  |
+| Folder 			  | Content 													    		  |
+| ------------------  | ------------------------------------------------------------------------- |
+| aws-keys 		      | Keys used at JCS to access EC2 instances                                  |
+| iam-policies 		  | Custom iam policies that we use at JCS 									  |
+| gitlab-repositories | Repositories that we use at JCS 										  |
+| infra-config 		  | All configuration files for our RDS clusters and the network 			  |
+| scripts-automation  | Scripts for environment setup                                             |
+| terraform   		  | Terraform scripts that will be triggered to spin up infrastructure in AWS |
 
 ### How to use this repository
 
