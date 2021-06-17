@@ -1,0 +1,6 @@
+.google.com
+.bbc.com
+.bbc.co.uk
+.ubuntu.com
+.microsoft.com
+.windowsupdate.com
