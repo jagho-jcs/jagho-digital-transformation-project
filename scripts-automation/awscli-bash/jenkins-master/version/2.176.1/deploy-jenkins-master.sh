@@ -1,6 +1,7 @@
 #!/bin/bash
 
 # 	Email: Yomi.Ogunyinka@JaghoConsultants.co.uk
+#       Website: www.jagho.tk
 #	MIT Licence applies, except if you modify this script you agree to the following terms:
 # 	Don't use `set -e`, you're not an animal. Trap your errors.
 # 	Don't use uppercase for variables that aren't inherited from the environment.
